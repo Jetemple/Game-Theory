@@ -33,7 +33,7 @@ def printAttitudes():
 if __name__ == "__main__":
     jack = attitudes.alwaysCooperate("bot1")
     omr = attitudes.alwaysDefect("bot2")
-    cat = attitudes.copyCat("bot3")
+    cat = attitudes.titForTat("bot3")
     i = 0
     game1 = game.matchup()
     while(i<5):
