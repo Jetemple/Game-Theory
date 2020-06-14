@@ -1,16 +1,20 @@
 class matchup(object):
-    def __init__(self):
+    def __init__(self, player1, player2):
+            self.player1 = player1
+            self.player2 = player2
             self.oneScore = 0 
             self.twoScore = 0
-    def run(self, player1, player2):
+    def run(self):
+        res1 = self.player1.makeMove(self.player2.last) 
+        res2 = self.player2.makeMove(self.player1.last)
         #Both players defect
-        if((player1+player2)==2):
+        if((res1+res2)==2):
             self.oneScore-=1
             self.twoScore-=1
-        elif((player1+player2)==0):
+        elif((res1+res2)==0):
             self.oneScore+=5
             self.twoScore+=5
-        elif(player1==0):
+        elif(res1==0):
             self.oneScore-=1
             self.twoScore+=3
         else:
